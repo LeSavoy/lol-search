@@ -4,7 +4,7 @@ import { useState } from "react";
 function App() {
   const [serachText, setSearchText] = useState("");
   const [playerData, setPlayerData] = useState({});
-  const API_KEY = "RGAPI-cf4d98e5-4861-496b-bda6-9e08f4676ab2";
+  const API_KEY = "RGAPI-3f7cadaa-dc22-4acf-af37-3a1c48b18533";
 
   function searchForPlayer() {
     let APICallString = `https://br1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${serachText} ?api_key= ${API_KEY}`;
@@ -50,7 +50,7 @@ function App() {
           <p className="absolute text-3xl font-bold ml-20 text-[#EB0029]">
             {playerData.name}
           </p>
-          <p className="absolute mt-20 ml-20">
+          <p className="absolute mt-10 ml-20 text-lg">
             Summoner Level {playerData.summonerLevel}
           </p>
         </div>
